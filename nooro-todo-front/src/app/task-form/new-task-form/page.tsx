@@ -1,3 +1,5 @@
+'use client'
+
 import CreateTaskForm from "@/app/ui/CreateTaskForm";
 
 export default function NewTaskForm() {
