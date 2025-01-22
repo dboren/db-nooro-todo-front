@@ -39,13 +39,21 @@ From here, users can enter the text of their new task and select a color to code
 
 ## Tech Stack
 next.js - react-based framework
+
 tailwind - styling
+
 axios - utilized to make calls to the server
+
 heroui - Additional styling elements
 
+<br>
+
 (Backend Below)
+
 Express.js - server, GET & POST routes
+
 Prisma - ORM for database interaction
+
 MySQL - database
 
 
