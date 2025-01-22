@@ -15,7 +15,8 @@ interface Task {
 
 export default function Home() {
 
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[]>([]);   //state for task pulled from database
+  const [selectedCard, setSelectedCard] = useState<string | null>(null); // Declare selectedCard state
 
   useEffect(() => {
     // Fetch tasks from back-end
@@ -24,6 +25,12 @@ export default function Home() {
 
   console.log(JSON.stringify(tasks));
 
+  console.log('Selected Card ID:', selectedCard);
+
+  const handleClick = (cardId: string) => {
+    setSelectedCard(cardId);
+    console.log('Selected Card ID:', selectedCard);
+  };
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -32,16 +39,14 @@ export default function Home() {
             </Link>
             <ul className="block list-none">
                 {tasks.map((task) => (
-                    <li key={task.id}>
+                    <li key={task.id} onClick={() => handleClick(task.id)} className="cursor-pointer">
                         <Link href="/task-form/edit-task-form">
-
                           <TaskCard
                             title={task.title}
                             color={task.color}
                             completed={task.completed}>
-                          <h2>{task.title}</h2>
+                            <h2>{task.title}</h2>
                           </TaskCard>
-
                         </Link>
                       </li>
                   ))}
