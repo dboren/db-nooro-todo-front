@@ -63,11 +63,11 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-7 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
           <Link href="/task-form/new-task-form">
-              <button className="bg-blue-500 rounded-3xl w-full px-8 py-3 max-w-[500px] text-white">Create Task</button>
+              <button className="bg-blue-500 rounded-md w-full px-8 py-3 max-w-[500px] text-white">Create Task</button>
             </Link>
-            <ul className="block list-none">
+            <ul className="block list-none py-10 gap-4">
                 {tasks.map((task) => (
-                    <li key={task.id}>
+                    <li key={task.id} className="mb-2">
                           <TaskCard
                             title={task.title}
                             color={task.color}

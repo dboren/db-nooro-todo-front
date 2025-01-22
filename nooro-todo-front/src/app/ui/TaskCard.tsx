@@ -15,7 +15,7 @@ export function TaskCard({
   //Not sure how color is meant to be implemented here based on the figma images provided
 
     return (
-      <div className="bg-gray-500 rounded-3xl w-full px-8 py-3 max-w-[500px] text-white">
+      <div className="bg-gray-500 rounded-md w-full px-8 py-3 max-w-[500px] text-white">
         <div className="flex p-4">
             <Checkbox></Checkbox>
           <h3 className="text-sm font-medium">{title}</h3>

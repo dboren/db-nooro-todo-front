@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <h1 className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center font-[family-name:var(--font-geist-sans)]">Todo App</h1>
+        <h1 className="grid grid-rows-[20px_3fr_20px] items-center justify-items-center font-[family-name:var(--font-geist-sans)]font-bold text-blue-500 text-xl font-bold">Todo App</h1>
         {children}
       </body>
     </html>
