@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroui/checkbox": "^2.3.9",
+    "@heroui/system": "^2.4.7",
+    "@heroui/theme": "^2.4.6",
     "axios": "^1.7.9",
+    "framer-motion": "^12.0.1",
     "next": "15.1.5",
     "prisma": "^6.2.1",
     "react": "^19.0.0",

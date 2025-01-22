@@ -1,11 +1,14 @@
-export function Card({
+import {Checkbox} from "@heroui/checkbox"
+
+export function TaskCard({
     title,
-    // color,
+    color,
     completed,
   }: {
     title: string;
-    valcolor: string;
+    color: string;
     completed: boolean;
+    children: React.ReactNode; 
   }) {
     
   //Not sure how color is meant to be implemented here based on the figma images provided
@@ -13,10 +16,12 @@ export function Card({
     return (
       <div className="rounded-xl bg-gray-50 p-2">
         <div className="flex p-4">
-            {/* checkbubble */}
+            <Checkbox></Checkbox>
           <h3 className="text-sm font-medium">{title}</h3>
           {/* delete button */}
         </div>
       </div>
     );
   }
+
+  export default TaskCard;
