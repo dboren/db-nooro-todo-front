@@ -1,11 +1,33 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
+interface Task {
+  id: string;
+  title: string;
+  color: string;
+  completed: boolean;
+  children: React.ReactNode;
+}
+
 
 const EditTaskForm = () => {
+
+    const [task, setTask] = useState<Task[]>([]);
+    
+    console.log("Current task in state:", task )
 
     const [id, setID] = useState('');
     const [title, setTitle] = useState('');
     const [color, setColor] = useState('');
     const [submitted, setSubmitted] = useState(false);
+
+    useEffect(() => {
+      // Fetch tasks from back-end
+      axios.get(`http://localhost:8080/api/v1/task/get/:${id}`).then((res) => setTask(res.data));
+    }, []);
+
+    console.log(task);
+  
   
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
