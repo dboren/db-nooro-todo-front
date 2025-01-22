@@ -1,3 +1,5 @@
+'use client'
+
 import EditTaskForm from "@/app/ui/EditTaskForm";
 
 export default function NewTaskForm() {

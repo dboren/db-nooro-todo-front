@@ -30,14 +30,20 @@ export default function Home() {
           <Link href="/task-form/new-task-form">
               <button>Create Task</button>
             </Link>
-            <ul>
+            <ul className="block list-none">
                 {tasks.map((task) => (
-                  <TaskCard key={task.id}
-                  title={task.title}
-                  color={task.color}
-                  completed={task.completed}>
-                    <h2>{task.title}</h2>
-                    </TaskCard>
+                    <li key={task.id}>
+                        <Link href="/task-form/edit-task-form">
+
+                          <TaskCard
+                            title={task.title}
+                            color={task.color}
+                            completed={task.completed}>
+                          <h2>{task.title}</h2>
+                          </TaskCard>
+
+                        </Link>
+                      </li>
                   ))}
                 </ul>
           <p>Placeholder for total tasks counter</p>
