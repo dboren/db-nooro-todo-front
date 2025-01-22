@@ -31,16 +31,17 @@ const CreateTaskForm = () => {
     };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form className="p-5" onSubmit={handleSubmit}>
+      <label className="block text-blue-500 font-bold">
         Title:
         <input 
+        className="bg-white"
         type="text"
         id="title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}/>
       </label>
-      <label>
+      <label className="block text-blue-500 font-bold">
         Color:
         <select value={color} onChange={(e) => setColor(e.target.value)}>
           <option value="red">Red</option>
@@ -48,7 +49,7 @@ const CreateTaskForm = () => {
           <option value="green">Green</option>
         </select>
       </label>
-      <button type="submit">Add Task</button>
+      <button className="block bg-blue-500 rounded-md text-white" type="submit">Add Task</button>
     </form>
   );
 };
