@@ -23,7 +23,19 @@ You will now be vewing the homepage of the app.
 
 If there are any existing tasks in your database, they will display vertically as a list of cards on the front page.
 
+<img src="images/HomePageScreenshot.jpg"
+     alt="screenshot of homepage"
+     />
 
+Clicking the trashcan icon of any task card will remove it from the page and send a call to the server to delete it from the database.     
+
+Clicking the "create task button" will navigate you to the create task form.
+
+<img src="images/CreateTaskScreenshot.jpg"
+     alt="screenshot of create task form"
+     />
+
+From here, users can enter the text of their new task and select a color to code it with. Clicking the "add task" button will then add the new task to the database. 
 
 ## Tech Stack
 next.js - react-based framework
