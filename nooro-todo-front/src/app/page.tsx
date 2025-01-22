@@ -61,9 +61,9 @@ export default function Home() {
 
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-7 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
           <Link href="/task-form/new-task-form">
-              <button>Create Task</button>
+              <button className="bg-blue-500 rounded-3xl w-full px-8 py-3 max-w-[500px] text-white">Create Task</button>
             </Link>
             <ul className="block list-none">
                 {tasks.map((task) => (
@@ -85,8 +85,8 @@ export default function Home() {
                       </li>
                   ))}
                 </ul>
-          <p>Placeholder for total tasks counter</p>
-          <p>Placeholder for completed task counter</p>
+          {/* <p>Placeholder for total tasks counter</p>
+          <p>Placeholder for completed task counter</p> */}
           <p>Create tasks and organize your to-do items</p>
     </div>
   );
